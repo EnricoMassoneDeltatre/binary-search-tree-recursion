@@ -3,7 +3,7 @@ class Node {
     this.value = value;
     this.left = null;
     this.right = null;
-    this.height = 1;
+    this.height = 1; // by convention a node with no children has height 1
   }
 
   hasLeftChild() {
@@ -23,11 +23,11 @@ class Node {
         this.left.add(value);
       }
 
-      // l'aggiunta di un nodo a sx può modificare la altezza del nodo corrente se e solo se 
-      // la altezza del figlio di sx è >= della altezza del figlio di dx
+      // checks whether adding a node to the left side changed the current node's height
+      // the height of a node is defined as the length of the longest path from the node itself to a leaf
 
       if (!this.hasRightChild() || this.left.height >= this.right.height) {
-        this.height = this.left.height + 1;
+        this.height = this.left.height + 1; // remember that the node itself adds 1 to its own height
       }
 
     } else {
@@ -38,11 +38,11 @@ class Node {
         this.right.add(value);
       }
 
-      // l'aggiunta di un nodo a dx può modificare la altezza del nodo corrente se e solo se 
-      // la altezza del figlio di dx è >= della altezza del figlio di sx
+      // checks whether adding a node to the right side changed the current node's height
+      // the height of a node is defined as the length of the longest path from the node itself to a leaf
 
       if (!this.hasLeftChild() || this.right.height >= this.left.height) {
-        this.height = this.right.height + 1;
+        this.height = this.right.height + 1; // remember that the node itself adds 1 to its own height
       }
     }
   }
