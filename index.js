@@ -16,9 +16,21 @@ class Node {
 
   add(value) {
     if (value <= this.value) {
-      // go to the left
+
+      if (!this.hasLeftChild()) {
+        this.left = new Node(value);
+      } else {
+        this.left.add(value);
+      }
+
     } else {
-      // go to the right
+
+      if (!this.hasRightChild()) {
+        this.right = new Node(value);
+      } else {
+        this.right.add(value);
+      }
+
     }
   }
 }
