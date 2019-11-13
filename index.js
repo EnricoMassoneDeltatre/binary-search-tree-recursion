@@ -23,6 +23,13 @@ class Node {
         this.left.add(value);
       }
 
+      // l'aggiunta di un nodo a sx può modificare la altezza del nodo corrente se e solo se 
+      // la altezza del figlio di sx è >= della altezza del figlio di dx
+
+      if (!this.hasRightChild() || this.left.height >= this.right.height) {
+        this.height = this.left.height + 1;
+      }
+
     } else {
 
       if (!this.hasRightChild()) {
@@ -31,6 +38,12 @@ class Node {
         this.right.add(value);
       }
 
+      // l'aggiunta di un nodo a dx può modificare la altezza del nodo corrente se e solo se 
+      // la altezza del figlio di dx è >= della altezza del figlio di sx
+
+      if (!this.hasLeftChild() || this.right.height >= this.left.height) {
+        this.height = this.right.height + 1;
+      }
     }
   }
 }
