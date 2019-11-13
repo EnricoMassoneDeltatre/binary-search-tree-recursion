@@ -6,8 +6,20 @@ class Node {
     this.height = 1;
   }
 
+  hasLeftChild() {
+    return this.left !== null;
+  }
+
+  hasRightChild() {
+    return this.right !== null;
+  }
+
   add(value) {
-    throw new Error("Not implemented yet");
+    if (value <= this.value) {
+      // go to the left
+    } else {
+      // go to the right
+    }
   }
 }
 
