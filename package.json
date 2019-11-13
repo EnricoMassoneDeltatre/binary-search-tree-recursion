@@ -1,0 +1,29 @@
+{
+  "name": "binary-search-tree-recursion",
+  "version": "1.0.0",
+  "description": "Javascript implementation of the binary search tree data structure",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EnricoMassoneDeltatre/binary-search-tree-recursion.git"
+  },
+  "keywords": [
+    "Javascript",
+    "ES6",
+    "data-structure"
+  ],
+  "author": "Enrico Massone",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EnricoMassoneDeltatre/binary-search-tree-recursion/issues"
+  },
+  "homepage": "https://github.com/EnricoMassoneDeltatre/binary-search-tree-recursion#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.6.0",
+    "jest": "^24.9.0"
+  }
+}
